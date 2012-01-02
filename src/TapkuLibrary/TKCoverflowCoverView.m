@@ -1,4 +1,4 @@
-//
+
 //  TKCoverView.m
 //  Created by Devin Ross on 1/3/10.
 //
@@ -37,7 +37,7 @@
 
 
 @implementation TKCoverflowCoverView
-@synthesize baseline,gradientLayer;
+@synthesize baseline,gradientLayer,imageView;
 
 
 - (id) initWithFrame:(CGRect)frame {
