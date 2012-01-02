@@ -386,6 +386,8 @@
 				[coverflowDelegate coverflowView:self coverAtIndexWasDoubleTapped:currentIndex];
 			
 		}else{
+			if([coverflowDelegate respondsToSelector:@selector(coverflowView:coverAtIndexWasSingleTapped:)])
+				[coverflowDelegate coverflowView:self coverAtIndexWasSingleTapped:currentIndex];
 			int index = [coverViews indexOfObject:currentTouch];
 			[self setContentOffset:CGPointMake(coverSpacing*index, 0) animated:YES];
 		}
