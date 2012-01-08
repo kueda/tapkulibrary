@@ -265,7 +265,8 @@
 }
 - (void) animationDidStop:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context{
 
-	if([finished boolValue]) [self adjustViewHeirarchy];
+    // causes a crash for some reason
+	// if([finished boolValue]) [self adjustViewHeirarchy];
 	
 	if([finished boolValue] && [animationID intValue] == currentIndex) [coverflowDelegate coverflowView:self coverAtIndexWasBroughtToFront:currentIndex];
 	
