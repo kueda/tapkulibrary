@@ -76,15 +76,16 @@
 	float factor = self.bounds.size.width / (h>w?h:w);
 	h = factor * h;
 	w = factor * w;
+    float x = (self.frame.size.width - w) / 2;
 	float y = baseline - h > 0 ? baseline - h : 0;
 	
-	imageView.frame = CGRectMake(0, y, w, h);
+	imageView.frame = CGRectMake(x, y, w, h);
 	imageView.image = image;
 	
 	
-	gradientLayer.frame = CGRectMake(0, y + h, w, h);
+	gradientLayer.frame = CGRectMake(x, y + h, w, h);
 	
-	reflected.frame = CGRectMake(0, y + h, w, h);
+	reflected.frame = CGRectMake(x, y + h, w, h);
 	reflected.image = image;
 }
 - (UIImage*) image{
